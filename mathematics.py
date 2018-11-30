@@ -183,6 +183,13 @@ def fraction(a):
             m += 1
     print(str(nume) + ' / ' + str(deno))
 
+#incomplete add fraction
+def addfraction(a, b):
+    num = []
+#incomplete subtract fraction
+def subtractfraction(a, b):
+    num = []
+
 #measurements of triangle and square shapes
 def perimetertriangle(l, w):
     p = l + w + math.sqrt(math.pow(l, 2) + math.pow(w, 2))
@@ -202,7 +209,36 @@ def areasquare(l, w):
 def areacircle(r):
     p = math.pi * math.pow(r, 2)
     print('circle area = ' + str(p))
+#incomplete geometry tools, consider moving to separate file
 
-#lists factors of a number, incomplete
+
+#finds the highest prime number up to num
+def isprime(num):
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(str(num) + ' is not a prime number. (divisible by ' + str(i) + ')')
+    print(str(num) + ' is a prime number')
+
+#lists factors of a number
 def factors(num):
-    n = 0
+    factors = []
+    factors.append(num)
+    for i in range(1, num):
+        if (num % i) == 0:
+            factors.append(i)
+    print('factors of ' + str(num) + ' is ' + str(factors))
+
+#incomplete lists prime factors of a number
+def primefactors(num):
+    factors = []
+
+#incomplete solve for y = ax + b
+def algebra(formula):
+    formula = []
+
+#returns a is % of b /round function glitches for some reason
+def percentage(a, b):
+    p = 0
+    p = round(a / b, 2)
+    p = p * 100
+    print(str(a) + ' is ' + str(p) + '% of ' + str(b))
